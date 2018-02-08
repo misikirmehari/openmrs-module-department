@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by misikirmehari on 1/30/18.
  */
-public class HibernateDepartmentDao implements DepartmentDao {
+public class HibernateDepartmentDAO implements DepartmentDAO {
 	
 	protected final Log log = LogFactory.getLog(this.getClass());
 	

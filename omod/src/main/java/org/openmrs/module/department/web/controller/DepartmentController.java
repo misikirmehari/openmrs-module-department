@@ -60,6 +60,6 @@ public class DepartmentController {
 			httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.saved");
 		}
 		return "redirect:departmentList.list";
-		
 	}
+	
 }

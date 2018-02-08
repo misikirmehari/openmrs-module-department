@@ -7,21 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.department.api;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.openmrs.User;
-import org.openmrs.api.UserService;
-import org.openmrs.module.department.Item;
-import org.openmrs.module.department.api.dao.DepartmentDao;
-import org.openmrs.module.department.api.impl.DepartmentServiceImpl;
-import static org.mockito.Mockito.*;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+package org.openmrs.module.department;
 
 /**
  * This is a unit test, which verifies logic in DepartmentService. It doesn't extend
@@ -29,35 +15,4 @@ import static org.junit.Assert.*;
  */
 public class DepartmentServiceTest {
 	
-	@InjectMocks
-	DepartmentServiceImpl basicModuleService;
-	
-	@Mock
-	DepartmentDao dao;
-	
-	@Mock
-	UserService userService;
-	
-	@Before
-	public void setupMocks() {
-		MockitoAnnotations.initMocks(this);
-	}
-	
-	@Test
-	public void saveItem_shouldSetOwnerIfNotSet() {
-		//Given
-		Item item = new Item();
-		item.setDescription("some description");
-		
-		when(dao.saveItem(item)).thenReturn(item);
-		
-		User user = new User();
-		when(userService.getUser(1)).thenReturn(user);
-		
-		//When
-		basicModuleService.saveItem(item);
-		
-		//Then
-		assertThat(item, hasProperty("owner", is(user)));
-	}
 }

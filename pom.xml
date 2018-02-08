@@ -13,7 +13,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Department</name>
-	<description>no description</description>
+	<description>Department module </description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 

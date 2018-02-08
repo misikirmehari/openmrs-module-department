@@ -13,11 +13,12 @@
         for a list of supported elements and attributes
     -->
 
+
     <!--
-        See http://www.liquibase.org/manual/home#available_database_refactorings
-        for a list of supported elements and attributes
-    -->
-    <changeSet author="misikir" id="20180130-1">
+       See http://www.liquibase.org/manual/home#available_database_refactorings
+       for a list of supported elements and attributes
+   -->
+    <changeSet author="misikir Mehari" id="20131010-1">
         <comment>Create the department table</comment>
         <createTable tableName="department_department">
             <column autoIncrement="true" name="department_id" type="int">

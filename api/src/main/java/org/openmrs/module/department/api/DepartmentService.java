@@ -19,8 +19,14 @@ import java.util.List;
  * The main service of this module, which is exposed for other modules. See
  * moduleApplicationContext.xml on how it is wired up.
  */
+@Transactional
 public interface DepartmentService extends OpenmrsService {
 	
+	/**
+	 * Gets a list of departments.
+	 * 
+	 * @return the department list.
+	 */
 	@Transactional(readOnly = true)
 	List<Department> getAllDepartments();
 	

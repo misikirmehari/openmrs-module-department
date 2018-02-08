@@ -9,14 +9,22 @@
  */
 package org.openmrs.module.department.api.dao;
 
+import org.hibernate.criterion.Restrictions;
+import org.openmrs.api.db.hibernate.DbSession;
+import org.openmrs.api.db.hibernate.DbSessionFactory;
 import org.openmrs.module.department.Department;
+import org.openmrs.module.department.Item;
+import org.openmrs.module.department.api.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository("department.DepartmentDao")
 /**
  * Database methods for {@link DepartmentService}.
  */
-public interface DepartmentDao {
+public interface DepartmentDAO {
 	
 	/**
 	 * @see org.openmrs.module.department.api.DepartmentService#getAllDepartments()
